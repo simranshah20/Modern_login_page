@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Link to custom stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Document title -->
+    <title>Login Page</title>
+</head>
+
+<body>
+
+    <!-- Container for the login page -->
+    <div id="container" class="container">
+
+        <!-- Sign up form -->
+        <div class="form sign_up">
+            <form>
+                <!-- Heading for the sign up form -->
+                <h1>Create Account</h1>
+
+                <!-- Social icons for sign up -->
+                <div class="social-icons">
+                    <a href="#" class="google"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://github.com/simranshah20" class="github"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+
+                <!-- Text for using email for registration -->
+                <span>or use your email for registeration</span>
+
+                <!-- Input fields for name, email, and password -->
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+
+                <!-- Button for signing up -->
+                <button class="btn form_btn">Sign Up</button>
+            </form>
+        </div>
+
+        <!-- Sign in form -->
+        <div class="form sign_in">
+            <form>
+                <!-- Heading for the sign in form -->
+                <h1>Sign In</h1>
+
+                <!-- Social icons for sign in -->
+                <div class="social-icons">
+                    <a href="#" class="google"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://github.com/simranshah20" class="github"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+
+                <!-- Text for using email and password for sign in -->
+                <span>or use your email password</span>
+
+                <!-- Input fields for email and password -->
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+
+                <!-- Link for forgetting password -->
+                <a href="#">Forget Your Password?</a>
+
+                <!-- Button for signing in -->
+                <button class="btn form_btn">Sign In</button>
+            </form>
+        </div>
+
+        <!-- Toggle section for switching between sign up and sign in forms -->
+        <div class="toggle-section">
+            <div class="toggle">
+                <div class="toggle_sub_section toggle-left">
+                    <!-- Heading and text for sign in -->
+                    <h1>Welcome Back !</h1>
+                    <p>Enter your personal details to use all of site features</p>
+
+                    <!-- Button for toggling to sign in form -->
+                    <button class="btn toggle_btn" id="login">Sign In</button>
+                </div>
+                <div class=" toggle_sub_section toggle-right">
+                    <!-- Heading and text for sign up -->
+                    <h1>Welcome, Friend!</h1>
+                    <p>Enter your personal details to use all of site features</p>
+
+                    <!-- Button for toggling to sign up form -->
+                    <button class="btn toggle_btn" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to custom JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

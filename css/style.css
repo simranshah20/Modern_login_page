@@ -1,0 +1,294 @@
+/* Import Google Fonts Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Reset margin, padding, box-sizing, and font-family for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Set background color and display, alignment, justification, direction, and height for the body */
+body {
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Set background color, border-radius, box-shadow, position, overflow, width, max-width, min-height, and transition for the container */
+.container {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    transition: all 0.6s ease-in-out;
+}
+
+/* Set font-size, line-height, letter-spacing, and margin for all p elements inside the container */
+.container p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+/* Set font-size for all span elements inside the container */
+.container span {
+    font-size: 12px;
+}
+
+/* Set color, font-size, text-decoration, and margin for all a elements inside the container */
+.container a {
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+/* Set font-size, padding, border-radius, font-weight, letter-spacing, text-transform, margin-top, and cursor for all btn elements inside the container */
+.btn {
+    font-size: 12px;
+    padding: 10px 45px;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Set background-color, border, and color for form_btn elements */
+.form_btn {
+    background-color: rgba(35, 153, 35, 0.694);
+    border: 1px solid transparent;
+    color: #fff;
+}
+
+/* Set background-color, border, and color for toggle_btn elements */
+.toggle_btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+/* Set background-color for form_btn elements on hover */
+.form_btn:hover {
+    background-color: green;
+}
+
+/* Set display, alignment, justify-content, padding, and height for the form */
+.container form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+/* Set background-color, border, margin, padding, font-size, border-radius, width, and outline for input elements inside the form */
+.container input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+/* Add box-shadow on focus for input elements inside the form */
+input:focus{
+    box-shadow: 1px 1px 5px 2px grey;
+}
+
+/* Set position, top, height, transition, and width for the form */
+.form {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+/* Set left, width, z-index, and transition for the sign_in form */
+.sign_in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+/* Translate X by 100% and set transition for the sign_in form on container active */
+.container.active .sign_in {
+    transform: translateX(100%);
+}
+
+/* Set left, width, opacity, z-index, animation, and transition for the sign_up form */
+.sign_up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.active .sign_up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+/* Define keyframes for the move animation */
+@keyframes move {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+/* Set margin, display, and margin for social-icons elements */
+.social-icons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Set border, border-radius, display, justify-content, align-items, margin, width, and height for social-icons a elements */
+.social-icons a {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+/* Set background-color, color, box-shadow, transform, and border for google social-icons a elements on hover */
+.social-icons .google:hover {
+    background-color: black;
+    color: red;
+    box-shadow: 1px 1px 10px 1px red;
+    transform: translate(0px,-5px); 
+    border: transparent;
+}
+
+/* Set background-color, color, box-shadow, transform, and border for facebook social-icons a elements on hover */
+.social-icons .facebook:hover {
+    background-color: rgb(110, 110, 181);
+    color: white;
+    /* x-axis y-axix blur spraed */
+    box-shadow: 1px 1px 5px 2px rgba(6, 6, 87, 0.692); 
+    transform: translate(0px,-5px);
+    border: transparent;
+}
+
+/* Set background-color, color, box-shadow, transform, and border for github social-icons a elements on hover */
+.social-icons .github:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 1px 1px 10px 1px black;
+    transform: translate(0px,-5px);
+    border: transparent;
+}
+
+/* Set background-color, color, box-shadow, transform, and border for linkedin social-icons a elements on hover */
+.social-icons .linkedin:hover {
+    background-color: rgb(59, 59, 173);
+    color: white;
+    box-shadow: 1px 1px 5px 2px rgba(16, 16, 147, 0.646);
+    transform: translate(0px,-5px);
+    border: transparent;
+}
+
+/* Set position, top, left, width, height, overflow, transition, border-radius, and z-index for toggle-section elements */
+.toggle-section {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+/* Translate X by -100% and set border-radius for toggle-section elements on container active */
+.container.active .toggle-section {
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+/* Set background-color, height, background, color, position, left, height, width, transform, transition, and z-index for toggle elements */
+.toggle {
+    background-color: linear-gradient(to right, #00ff8f, #00a1ff);
+    height: 100%;
+    background: linear-gradient(to left, #1D2671, #C33764);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+/* Translate X by 50% and set transition for toggle elements on container active */
+.container.active .toggle {
+    transform: translateX(50%);
+}
+
+/* Set position, width, height, display, align-items, justify-content, padding, text-align, top, transform, and transition for toggle_sub_section elements */
+.toggle_sub_section {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+/* Translate X by -200% for toggle-left toggle_sub_section elements on container active */
+.toggle-left {
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left {
+    transform: translateX(0);
+}
+
+/* Set right, transform, and transition for toggle-right toggle_sub_section elements on container active */
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right {
+    transform: translateX(200%);
+}
